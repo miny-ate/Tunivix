@@ -35,11 +35,11 @@ document.querySelectorAll('[data-year]').forEach(function(el){
     var service = form.querySelector('#f-service').value;
     var message = form.querySelector('#f-message').value.trim();
 
-    var subject = 'Project inquiry' + (service ? ' — ' + service : '');
+    var subject = 'Supply enquiry' + (service ? ' — ' + service : '');
     var bodyLines = [
       'Name: ' + name,
       'Email: ' + email,
-      'Service: ' + (service || 'Not specified'),
+      'Enquiry type: ' + (service || 'Not specified'),
       '',
       message
     ];
