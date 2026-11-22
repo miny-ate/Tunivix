@@ -6,159 +6,186 @@
 <title>Tunivix Industries Limited | Engineering. Fabrication. Manufacturing.</title>
 <meta name="description" content="Tunivix Industries Limited. Engineering, fabrication and manufacturing for Kenya, East Africa and international markets.">
 <meta name="theme-color" content="#0d0f2b">
-<link rel="canonical" href="https://www.tunivix.com">
+<link rel="canonical" href="https://www.tunivix.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;500;600;800&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#0d0f2b;
-    --bg2:#14173f;
-    --text:#eceefa;
-    --muted:#9a9fc4;
-    --line:rgba(255,255,255,.12);
-    --green:#44A755;
-    --indigo:#5a5fd1;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    font-family:'Inter',system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-    color:var(--text);background:var(--bg);line-height:1.6;
-    min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased;
-    background-image:
-      radial-gradient(900px 520px at 90% -10%,rgba(90,95,209,.28),transparent 60%),
-      radial-gradient(700px 480px at -10% 105%,rgba(68,167,85,.16),transparent 60%);
-    background-attachment:fixed;
-  }
-  body::before{
-    content:"";position:fixed;inset:0;pointer-events:none;
-    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
-    background-size:90px 90px;opacity:.18;
-    mask-image:radial-gradient(ellipse at 50% 30%,#000 10%,transparent 70%);
-    -webkit-mask-image:radial-gradient(ellipse at 50% 30%,#000 10%,transparent 70%);
-  }
-  .wrap{position:relative;width:100%;max-width:1040px;margin:0 auto;padding:0 28px}
-
-  /* Hero */
-  .hero{padding:15vh 0 9vh}
-  .rule{width:56px;height:2px;background:var(--green);margin-bottom:36px}
-  h1{
-    font-family:'Montserrat',sans-serif;font-weight:300;
-    font-size:clamp(46px,10vw,112px);letter-spacing:.16em;line-height:1;color:#fff;
-    margin-right:-.16em;
-  }
-  .ltd{
-    font-family:'Montserrat',sans-serif;font-weight:500;
-    font-size:clamp(11px,1.8vw,15px);letter-spacing:.6em;color:var(--green);margin-top:22px;
-  }
-  .slogan{
-    margin-top:56px;font-family:'Montserrat',sans-serif;font-weight:500;
-    font-size:clamp(17px,2.6vw,26px);letter-spacing:.04em;color:#fff;
-  }
-  .slogan i{font-style:normal;color:var(--muted);margin:0 .15em}
-  .tagline{margin-top:12px;font-weight:300;font-size:clamp(16px,2vw,19px);color:var(--muted);letter-spacing:.02em}
-
-  /* Disciplines */
-  .brief{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .item{padding:44px 32px 46px 0;position:relative}
-  .item + .item{padding-left:32px;border-left:1px solid var(--line)}
-  .no{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;letter-spacing:.3em;color:var(--green)}
-  .item h2{font-family:'Montserrat',sans-serif;font-weight:500;font-size:20px;letter-spacing:.14em;text-transform:uppercase;margin:16px 0 12px;color:#fff}
-  .item p{font-size:15.5px;font-weight:300;color:var(--muted);max-width:280px}
-
-  /* Contact */
-  .contact{padding:84px 0 90px}
-  .label{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;letter-spacing:.4em;text-transform:uppercase;color:var(--green);margin-bottom:34px;display:flex;align-items:center;gap:16px}
-  .label::after{content:"";height:1px;flex:1;background:var(--line)}
-  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-  .mail{
-    display:flex;flex-direction:column;gap:6px;padding:26px 28px;border:1px solid var(--line);border-radius:6px;
-    background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));
-    transition:border-color .25s,background .25s,transform .25s;
-  }
-  .mail small{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
-  .mail span{font-size:clamp(16px,2.2vw,20px);font-weight:400;color:#fff;word-break:break-all;display:flex;justify-content:space-between;align-items:center;gap:14px}
-  .mail span::after{content:"\2192";color:var(--green);transition:transform .25s}
-  .mail:hover{border-color:var(--green);background:rgba(68,167,85,.07);transform:translateY(-2px)}
-  .mail:hover span::after{transform:translateX(5px)}
-  .mail:focus-visible{outline:2px solid var(--green);outline-offset:3px}
-
-  .markets{margin-top:26px;font-size:13px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
-
-  footer{margin-top:auto;position:relative;background:#1b1d3a;color:#c4c7de;padding:48px 0 28px}
-  .foot{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
-  .brand{display:flex;flex-direction:column;line-height:1}
-  .brand b{font-family:'Montserrat',sans-serif;font-size:26px;font-weight:800;letter-spacing:.14em;color:#fff}
-  .brand small{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:.42em;color:var(--green);margin-top:7px}
-  footer .tag{margin-top:18px;font-size:16px;line-height:1.7;color:#d9dbee}
-  footer ul{list-style:none;display:flex;gap:30px;flex-wrap:wrap;padding-top:6px}
-  footer ul a{font-size:15.5px;color:#d9dbee;transition:color .2s}
-  footer ul a:hover{color:#fff}
-  .copy{margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;font-size:15px;color:#d9dbee}
-
-  @media (max-width:820px){
-    .hero{padding:11vh 0 7vh}
-    .brief{grid-template-columns:1fr}
-    .item,.item + .item{padding:32px 0;border-left:0}
-    .item + .item{border-top:1px solid var(--line)}
-    .item p{max-width:none}
-    .grid{grid-template-columns:1fr}
-    .contact{padding:64px 0 70px}
-    footer ul{gap:22px}
-  }
-  @media (prefers-reduced-motion:no-preference){
-    .hero .wrap > *{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
-    .hero .wrap > *:nth-child(2){animation-delay:.08s}
-    .hero .wrap > *:nth-child(3){animation-delay:.16s}
-    .hero .wrap > *:nth-child(4){animation-delay:.28s}
-    .hero .wrap > *:nth-child(5){animation-delay:.36s}
-    @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-  }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="nav-mark" href="/" aria-label="Tunivix Industries home">
+      <b>TUNIVIX</b><small>INDUSTRIES LIMITED</small>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/" aria-current="page">Home</a>
+      <a href="about/">About</a>
+      <a href="services/">Services</a>
+      <a href="industries/">Industries</a>
+      <a href="projects/">Projects</a>
+      <a href="contact/">Contact</a>
+      <a class="nav-cta" href="contact/">Request a Quote</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
 
 <header class="hero" id="top">
   <div class="wrap">
     <div class="rule"></div>
-    <h1>TUNIVIX</h1>
+    <h1 class="wordmark">TUNIVIX</h1>
     <div class="ltd">INDUSTRIES LIMITED</div>
     <p class="slogan">Engineering<i>.</i> Fabrication<i>.</i> Manufacturing<i>.</i></p>
     <p class="tagline">Building industries. Creating possibilities.</p>
-    <p class="markets" id="markets">Kenya &nbsp;|&nbsp; East Africa &nbsp;|&nbsp; International Markets</p>
+    <p class="markets">Kenya &nbsp;|&nbsp; East Africa &nbsp;|&nbsp; International Markets</p>
+    <div class="hero-ctas">
+      <a class="btn btn-solid" href="contact/">Request a Quote</a>
+      <a class="btn btn-outline" href="services/">View Services</a>
+    </div>
   </div>
 </header>
 
 <main>
   <div class="wrap">
-    <section class="brief" id="services" aria-label="What we do">
-      <div class="item">
-        <div class="no">01</div>
-        <h2>Engineering</h2>
-        <p>Practical design and technical solutions built around your operation.</p>
-      </div>
-      <div class="item">
-        <div class="no">02</div>
-        <h2>Fabrication</h2>
-        <p>Precision metalwork and structures made to specification.</p>
-      </div>
-      <div class="item">
-        <div class="no">03</div>
-        <h2>Manufacturing</h2>
-        <p>Reliable, quality production for local and export markets.</p>
+
+    <!-- Stats: edit the figures below with your real numbers -->
+    <section class="stats">
+      <div class="stats-row">
+        <div class="stat">
+          <div class="stat-tick"></div>
+          <div class="figure stat-num">03</div>
+          <p class="stat-label">Core engineering disciplines under one roof</p>
+        </div>
+        <div class="stat">
+          <div class="stat-tick"></div>
+          <div class="figure stat-num">50+</div> <!-- EDIT: replace with real project count -->
+          <p class="stat-label">Projects engineered and delivered</p>
+        </div>
+        <div class="stat">
+          <div class="stat-tick"></div>
+          <div class="figure stat-num">15+</div> <!-- EDIT: replace with real combined years -->
+          <p class="stat-label">Years combined team experience</p>
+        </div>
       </div>
     </section>
 
+    <section id="services" aria-label="What we do">
+      <div class="brief">
+        <div class="item">
+          <div class="no">01</div>
+          <h2>Engineering</h2>
+          <p>Practical design and technical solutions built around your operation.</p>
+        </div>
+        <div class="item">
+          <div class="no">02</div>
+          <h2>Fabrication</h2>
+          <p>Precision metalwork and structures made to specification.</p>
+        </div>
+        <div class="item">
+          <div class="no">03</div>
+          <h2>Manufacturing</h2>
+          <p>Reliable, quality production for local and export markets.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Delivery process -->
+    <section class="section process">
+      <div class="section-head">
+        <div class="label">How We Deliver</div>
+        <h2 class="section-title">A disciplined process, from first sketch to final weld.</h2>
+      </div>
+      <div class="process-track">
+        <div class="p-step"><div class="p-node"></div><h4>Assessment</h4><p>Site visit, scope and requirements review.</p></div>
+        <div class="p-step"><div class="p-node"></div><h4>Analysis</h4><p>Technical feasibility and material selection.</p></div>
+        <div class="p-step"><div class="p-node"></div><h4>Planning</h4><p>Detailed design, drawings and scheduling.</p></div>
+        <div class="p-step"><div class="p-node"></div><h4>Implementation</h4><p>Fabrication, build and on-site execution.</p></div>
+        <div class="p-step"><div class="p-node"></div><h4>Monitoring</h4><p>Quality checks against spec at every stage.</p></div>
+        <div class="p-step"><div class="p-node"></div><h4>Optimization</h4><p>Handover, support and continuous improvement.</p></div>
+      </div>
+    </section>
+
+    <!-- Capability cards -->
+    <section class="section">
+      <div class="section-head">
+        <div class="label">Capabilities</div>
+        <h2 class="section-title">What we build, maintain and produce.</h2>
+        <p class="section-sub">A closer look at the three disciplines behind every Tunivix project — see the full breakdown on the Services page.</p>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-no">01</div>
+          <h3>Structural &amp; Mechanical Engineering</h3>
+          <p>Design, drawings and technical consulting for structures, machinery and industrial systems.</p>
+          <a class="card-link" href="services/#engineering">Learn more →</a>
+        </div>
+        <div class="card">
+          <div class="card-no">02</div>
+          <h3>Precision Fabrication</h3>
+          <p>Custom metalwork, structural steel and fabricated components made to exact specification.</p>
+          <a class="card-link" href="services/#fabrication">Learn more →</a>
+        </div>
+        <div class="card">
+          <div class="card-no">03</div>
+          <h3>Manufacturing &amp; Production</h3>
+          <p>Reliable production runs for local and export markets, from prototype to volume.</p>
+          <a class="card-link" href="services/#manufacturing">Learn more →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industries teaser -->
+    <section class="section">
+      <div class="section-head">
+        <div class="label">Industries</div>
+        <h2 class="section-title">Sectors we work alongside.</h2>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Manufacturing &amp; Processing</h3>
+          <p>Production lines, plant equipment and process machinery.</p>
+        </div>
+        <div class="card">
+          <h3>Construction &amp; Infrastructure</h3>
+          <p>Structural steel, site fabrication and technical support.</p>
+        </div>
+        <div class="card">
+          <h3>Agriculture &amp; Energy</h3>
+          <p>Equipment, installations and fabricated systems for the field.</p>
+        </div>
+      </div>
+      <div style="margin-top:28px">
+        <a class="back-link" href="industries/" style="margin-bottom:0">View all industries →</a>
+      </div>
+    </section>
+
+    <!-- CTA band -->
+    <section class="cta-band">
+      <div>
+        <h3>Have a project in mind?</h3>
+        <p>Tell us what you're building — we'll help you engineer it.</p>
+      </div>
+      <a class="btn btn-solid" href="contact/">Request a Quote</a>
+    </section>
+
+    <!-- Contact -->
     <section class="contact" id="contact" aria-label="Contact">
       <div class="label">Contact</div>
-      <div class="grid">
+      <div class="grid2">
         <a class="mail" href="mailto:engineering@tunivix.com"><small>Engineering</small><span>engineering@tunivix.com</span></a>
         <a class="mail" href="mailto:operations@tunivix.com"><small>Operations</small><span>operations@tunivix.com</span></a>
         <a class="mail" href="mailto:accounting@tunivix.com"><small>Accounting</small><span>accounting@tunivix.com</span></a>
         <a class="mail" href="mailto:noel.shimba@tunivix.com"><small>Noel Shimba</small><span>noel.shimba@tunivix.com</span></a>
       </div>
+      <div style="margin-top:28px">
+        <a class="back-link" href="contact/" style="margin-bottom:0">Full contact details →</a>
+      </div>
     </section>
+
   </div>
 </main>
 
@@ -169,22 +196,35 @@
         <div class="brand"><b>TUNIVIX</b><small>INDUSTRIES LIMITED</small></div>
         <p class="tag">Engineering. Fabrication. Manufacturing.<br>Building industries. Creating possibilities.</p>
       </div>
-      <nav aria-label="Footer">
-        <ul>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#top">About</a></li>
-          <li><a href="#markets">Markets</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h5>Navigate</h5>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="about/">About</a></li>
+            <li><a href="services/">Services</a></li>
+            <li><a href="industries/">Industries</a></li>
+            <li><a href="projects/">Projects</a></li>
+            <li><a href="contact/">Contact</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="mailto:engineering@tunivix.com">engineering@tunivix.com</a></li>
+            <li><a href="mailto:operations@tunivix.com">operations@tunivix.com</a></li>
+            <li><a href="mailto:accounting@tunivix.com">accounting@tunivix.com</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
     <div class="copy">
-      <span>&copy; <span id="yr">2026</span> Tunivix Industries Limited. All rights reserved.</span>
+      <span>&copy; <span data-year>2026</span> Tunivix Industries Limited. All rights reserved.</span>
       <span>www.tunivix.com</span>
     </div>
   </div>
 </footer>
-<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 
+<script src="assets/js/main.js"></script>
 </body>
 </html>
