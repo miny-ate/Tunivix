@@ -59,8 +59,9 @@ section{position:relative;z-index:1}
   backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
   border-bottom:1px solid var(--line-soft);
 }
-.nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
-.nav-mark{display:flex;flex-direction:column;line-height:1}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 28px}
+.nav-mark{display:flex;align-items:center;line-height:0}
+.nav-mark img{height:32px;width:auto}
 .nav-mark b{font-family:'Montserrat',sans-serif;font-weight:700;font-size:19px;letter-spacing:.12em;color:#fff}
 .nav-mark small{font-family:'Montserrat',sans-serif;font-weight:500;font-size:8.5px;letter-spacing:.34em;color:var(--green);margin-top:4px}
 .nav-links{display:flex;align-items:center;gap:36px}
@@ -83,7 +84,7 @@ section{position:relative;z-index:1}
 
 @media (max-width:860px){
   .nav-links{
-    position:fixed;top:68px;left:0;right:0;bottom:0;
+    position:absolute;top:100%;left:0;right:0;height:calc(100vh - 65px);height:calc(100dvh - 65px);
     background:#0d0f2b;flex-direction:column;align-items:flex-start;gap:0;
     padding:8px 28px 28px;transform:translateY(-8px);opacity:0;pointer-events:none;
     transition:opacity .22s,transform .22s;overflow-y:auto;
@@ -257,7 +258,9 @@ h1.wordmark{
 /* ---------- Footer ---------- */
 footer{margin-top:auto;position:relative;background:#1b1d3a;color:#c4c7de;padding:52px 0 28px}
 .foot{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap}
-.brand{display:flex;flex-direction:column;line-height:1}
+.brand{display:block;line-height:0}
+.brand img{height:37px;width:auto}
+.brand-ltd{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:.4em;color:var(--green);margin-top:12px}
 .brand b{font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800;letter-spacing:.14em;color:#fff}
 .brand small{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:.4em;color:var(--green);margin-top:7px}
 footer .tag{margin-top:18px;font-size:15px;line-height:1.7;color:#d9dbee;max-width:280px}
@@ -281,4 +284,72 @@ footer .tag{margin-top:18px;font-size:15px;line-height:1.7;color:#d9dbee;max-wid
   .foot-cols{gap:32px}
   .section{padding:60px 0}
   .cta-band{padding:50px 0}
+}
+
+
+/* ===========================================================
+   Logo, company-profile additions
+   =========================================================== */
+
+/* Hero logo (replaces the text wordmark) */
+.hero-logo{margin:0;line-height:0}
+.hero-logo img{width:clamp(250px,46vw,520px);height:auto}
+.hero .slogan{margin-top:40px;max-width:1000px}
+
+/* 2-column card grid (4 or 10 items) */
+.card-grid.cols-2{grid-template-columns:repeat(2,1fr)}
+@media (max-width:700px){.card-grid.cols-2{grid-template-columns:1fr}}
+
+/* Bulleted product lists inside cards */
+.card-list{list-style:none;display:flex;flex-direction:column;gap:0;margin-top:2px}
+.card-list li{
+  font-size:14.5px;font-weight:300;color:var(--muted);line-height:1.5;
+  padding:9px 0 9px 20px;border-top:1px solid var(--line-soft);position:relative;
+}
+.card-list li::before{content:"";position:absolute;left:0;top:18px;width:8px;height:1px;background:var(--green)}
+
+/* Compact title-only cards */
+.card-slim{padding:26px 32px;flex-direction:row;align-items:center}
+.card-slim h3{font-size:16.5px}
+
+/* Small headings inside two-col blocks (vision / mission) */
+.mini-head{font-family:'Montserrat',sans-serif;font-weight:500;font-size:16px;letter-spacing:.08em;text-transform:uppercase;color:#fff;margin-bottom:12px}
+
+/* Seven-item grid: let the last, odd item span the row */
+.values .value:last-child:nth-child(odd){grid-column:1/-1}
+
+/* Business-model list */
+.model-list{
+  list-style:none;display:grid;grid-template-columns:repeat(2,1fr);column-gap:56px;
+  border-top:1px solid var(--line);
+}
+.model-list li{
+  padding:18px 0 18px 26px;border-bottom:1px solid var(--line);position:relative;
+  font-size:15.5px;font-weight:300;color:var(--text);
+}
+.model-list li::before{content:"";position:absolute;left:0;top:30px;width:12px;height:1px;background:var(--green)}
+@media (max-width:700px){.model-list{grid-template-columns:1fr}}
+
+/* Five-step roadmap on the home page */
+.process-track.five{grid-template-columns:repeat(5,1fr)}
+.process-track.five .p-step h4{font-size:16px}
+@media (max-width:980px){.process-track.five{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:540px){.process-track.five{grid-template-columns:1fr}}
+
+/* Roadmap page timeline */
+.timeline{border-top:1px solid var(--line)}
+.tl-row{display:grid;grid-template-columns:200px 1fr;gap:32px;align-items:baseline;padding:30px 0;border-bottom:1px solid var(--line)}
+.tl-year{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(30px,4vw,40px);color:#fff;line-height:1}
+.tl-row p{font-size:clamp(16px,1.9vw,19px);font-weight:300;color:var(--muted);max-width:560px}
+@media (max-width:640px){.tl-row{grid-template-columns:1fr;gap:10px;padding:24px 0}}
+
+/* Plain (non-link) line in contact column */
+.direct-line .plain{display:block;margin-top:6px;font-size:18px;color:#fff}
+
+/* Footer: non-link list entries */
+.foot-col li{font-size:14.5px;color:#d9dbee}
+
+@media (max-width:820px){
+  .hero .slogan{margin-top:32px}
+  .card-slim{padding:22px 24px}
 }
